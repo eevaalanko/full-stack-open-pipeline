@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const PersonForm = ({
   addPerson,
@@ -34,6 +34,6 @@ const PersonForm = ({
       </div>
     </form>
   </div>
-);
+)
 
-export default PersonForm;
+export default PersonForm
