@@ -1,7 +1,6 @@
-import React from 'react';
+import React from 'react'
 
 const Persons = ({ persons, removePerson }) => {
-  console.log('persons, persons', persons);
   return (
     <div>
       <h2>Numbers</h2>
@@ -14,7 +13,7 @@ const Persons = ({ persons, removePerson }) => {
         </p>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Persons;
+export default Persons
