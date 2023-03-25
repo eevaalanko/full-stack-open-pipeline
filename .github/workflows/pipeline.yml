@@ -28,22 +28,22 @@ jobs:
            wait-on: http://localhost:5001
 
 
-#  tag_release:
-#    needs: [pre_deployment_tasks]
-#    runs-on: ubuntu-20.04
-#    permissions: write-all
-#    if: ${{ github.event_name == 'push' && !contains(join(toJSon(github.event.commits.*.message)), 'skip') }}
-#    steps:
-#      - uses: actions/checkout@v3
-#        with:
-#          fetch-depth: '0'
-#      - name: Bump version and push tag
-#        uses: anothrNick/github-tag-action@1.61.0
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          WITH_V: true
-##          DRY_RUN: true
-#
+  tag_release:
+    needs: [pre_deployment_tasks]
+    runs-on: ubuntu-20.04
+    permissions: write-all
+    if: ${{ github.event_name == 'push' && !contains(join(toJSon(github.event.commits.*.message)), 'skip') }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.61.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+#          DRY_RUN: true
+
 #  deploy:
 #    name: Deploy app
 #    needs: [pre_deployment_tasks]
