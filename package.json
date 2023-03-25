@@ -14,7 +14,7 @@
     "build": "webpack --mode production",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run",
-    "server": "json-server -p3001 --watch db.json --host 0.0.0.0"
+    "server": "json-server -p3001 --watch db.json"
   },
   "repository": {
     "type": "git",
