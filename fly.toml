@@ -17,6 +17,10 @@ primary_region = "ams"
 [processes]
   app = "node app.js"
 
+[build]
+  [build.args]
+    NODE_VERSION = "16.15.0"
+
 [[services]]
   internal_port = 8080
   processes = ["app"]
